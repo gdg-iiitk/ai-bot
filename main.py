@@ -1,11 +1,10 @@
 import configparser
 import sys
-
 import google.generativeai as genai
 
 config = configparser.ConfigParser()
 config.read("cred.cfg")
-
+ 
 try:
     API_KEY = config["key"]["api"]
 except KeyError as e:
