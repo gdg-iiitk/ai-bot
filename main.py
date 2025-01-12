@@ -1,43 +1,85 @@
-import configparser
-import sys
-import google.generativeai as genai
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.memory import ConversationBufferMemory
+from langchain.chains import ConversationChain
+from langchain.prompts import PromptTemplate
+from langchain.tools import Tool
+from langchain.agents import initialize_agent, AgentType
+import os
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from datetime import datetime
 
-config = configparser.ConfigParser()
-config.read("cred.cfg")
- 
-try:
-    API_KEY = config["key"]["api"]
-except KeyError as e:
-    print(e)
-    sys.exit(1)
-genai.configure(api_key=API_KEY)
-generation_config = {
-    "temperature": 1,
-    "top_p": 0.95,
-    "top_k": 40,
-    "max_output_tokens": 8192,
-    "response_mime_type": "text/plain",
-}
-model = genai.GenerativeModel(
-    model_name="gemini-1.5-pro",
-    generation_config=generation_config,
+# Set your API key
+os.environ["GOOGLE_API_KEY"] = "AIzaSyAYew4okjx4jmR7xbKhLj2mAckgtUUbR-k"
+
+# Initialize the LangChain Google Gemini model
+llm = ChatGoogleGenerativeAI(
+    # model="gemini-1.5-pro",
+    model="gemini-2.0-flash-exp",
+    temperature=1.0,
+    top_p=0.95,
+    top_k=40,
+    max_output_tokens=8192,
 )
-chat_session = model.start_chat(
-    history=[
-        {
-            "role": "user",
-            "parts": [
-                "I will provide you with the standard output  from terminal code executions. Please explain the error, identify its cause, and suggest a solution to fix it",
-            ],
-        },
-        {
-            "role": "model",
-            "parts": [
-                "Okay, I'm ready. Please provide the output.  The more context you can give me (the code you ran, the operating system, etc.), the better I can help.\n",
-            ],
-        },
-    ]
+
+# Create a conversation memory
+memory = ConversationBufferMemory()
+
+# Define the conversation template
+template = """You are an AI assistant for IIIT Kottayam students.
+Current conversation:
+{history}
+Human: {input}
+Assistant:"""
+
+prompt = PromptTemplate(input_variables=["history", "input"], template=template)
+
+# Create the conversation chain
+conversation = ConversationChain(
+    llm=llm,
+    memory=memory,
+    prompt=prompt,
+    verbose=True
 )
-stream = input()
-response = chat_session.send_message(stream)
-print(response.text)
+
+# Define tools
+with open("mess_menu.txt", "r") as file:
+    mess_menu = file.read()
+def load_mess_menu(input_str=None):
+    """Load the mess menu context into the conversation"""
+    conversation.predict(input=f"This is the mess menu of the campus. Please use this context to answer queries about the menu: {mess_menu}")
+
+
+def get_time_context(arg):
+    """Get current date and time information"""
+    print(arg)
+    now = datetime.now()
+    return f"""Current time context:
+- Date: {now.strftime('%A, %B %d, %Y')}
+- Time: {now.strftime('%I:%M %p')}
+- Day of week: {now.strftime('%A')}"""
+
+tools = [
+    Tool(
+        name="Load Mess Menu",
+        func=load_mess_menu,
+        description="Use this tool to load the mess menu context when the query is related to food, mess, or menu.",
+        return_direct=True  # Add this to return the result directly
+    ),
+    Tool(
+        name="Get Time Context",
+        func=get_time_context,
+        description="Use this tool to get the current date and time information. Don't pass any arguements"
+    )
+]
+
+# Initialize agent
+agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
+
+def chat(user_input):
+    response = agent.run(user_input)
+    return response
+
+# Example usage
+user_input = input("Enter your query: ")
+response = chat(user_input)
+print("Assistant:", response)
