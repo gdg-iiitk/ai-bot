@@ -46,7 +46,7 @@ with open("mess_menu.txt", "r") as file:
     mess_menu = file.read()
 def load_mess_menu(input_str=None):
     """Load the mess menu context into the conversation"""
-    conversation.predict(input=f"This is the mess menu of the campus. Please use this context to answer queries about the menu: {mess_menu}")
+    return f"This is the mess menu of the campus. Please use this context to answer queries about the menu: {mess_menu}"
 
 
 def get_time_context(arg):
@@ -63,20 +63,31 @@ tools = [
         name="Load Mess Menu",
         func=load_mess_menu,
         description="Use this tool to load the mess menu context when the query is related to food, mess, or menu.",
-        return_direct=True  # Add this to return the result directly
+        # return_direct=True  # Add this to return the result directly
     ),
     Tool(
-        name="Get Time Context",
+        name="Get Date and Time Context",
         func=get_time_context,
-        description="Use this tool to get the current date and time information. Don't pass any arguements"
+        description="Use this tool to get the current date and time information and what day it is"
     )
 ]
 
 # Initialize agent
-agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
+agent = initialize_agent(
+    tools, 
+    llm, 
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, 
+    verbose=True,
+    allow_multiple_tools=True  # Enable multiple tools
+)
 
 def chat(user_input):
+    # Get the response from the agent
     response = agent.run(user_input)
+    
+    # Update the conversation memory with the response
+    memory.save_context({"input": user_input}, {"output": response})
+    
     return response
 
 # Example usage
