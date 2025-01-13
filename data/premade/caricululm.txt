@@ -1,0 +1,55 @@
+Indian Institute of Information Technology Kottayam
+
+Curriculum and Syllabus
+
+B.Tech./B.Tech (Hons)/Dual Degree (B.Tech - MS) Program in Computer Science and Engineering with Specialization in Artificial Intelligence and Data Science
+
+Program Overview:
+
+This document details the curriculum and syllabus for the B.Tech., B.Tech (Hons), and Dual Degree (B.Tech - MS) programs in Computer Science and Engineering, specializing in Artificial Intelligence and Data Science, offered by the Indian Institute of Information Technology Kottayam. The program aims to equip students with a strong foundation in computer science, coupled with specialized knowledge in AI and Data Science.
+
+Course Structure:
+
+The program is structured across semesters, with a combination of core courses, elective courses, and project work. B.Tech and B.Tech (Hons) programs are 4-year programs whereas B.Tech - MS is a 5-year integrated dual degree program. Students can opt for Honours by achieving a minimum CGPA of 8.0. Students may opt for industrial training in their final semester. Credit requirements for each degree are as follows: B.Tech - 174, B.Tech(Hons) - 186, and B.Tech-MS - 218.
+
+Semester-Wise Course Breakdown:
+
+Semester I: Discrete Mathematics, IT Workshop I, Computer Programming, Electronic Circuits, Communication Skills, Foreign Language (French), Physical Training.
+
+Semester II: Calculus and Linear Algebra, Digital Design and Electric Circuits, Data Structures I, Computer Organization, IT Workshop II, Personality Development.
+
+Semester III: Probability, Statistics and Random Processes, Design and Analysis of Algorithms, Operating Systems, Database Management Systems, IT Workshop III, Introduction to Cognitive Science, Data Structures II, Physical Training.
+
+Semester IV: Differential Equations and Transforms, Theory of Computation, Object-Oriented Analysis and Design, Compiler Design, Computer Networks, Data Structures III, Fundamentals of Economics, Principles of Management.
+
+Semester V: Artificial Intelligence, Software Engineering and Project Management, Parallel and Distributed Computing, Cyber Physical System and Internet of Things, Digital Signal Processing, Optimization Techniques for Data Science, Human Resource Management, Financial Management and Accounting, Operations and Supply Chain Management.
+
+Semester VI: Microprocessors, Cloud Computing, Data Warehousing and Data Mining, Machine Learning, Introduction to Network Science Analytics, Introduction to DevOps and Microservices, Honours Project I (Optional).
+
+Semester VII: Computer Graphics, Speech and Natural Language Processing, Computer Vision, Cryptography and Network Security, Data Handling Analysis and Visualization, Streaming Data Analytics, Dependable and Secure AI, Pattern Recognition, BTP - I, Research Course (Optional).
+
+Semester VIII: Applied Predictive Analytics, Computer Systems for Machine Learning, Scientific Machine Learning, Time Series Analytics, Graph Analytics for Big Data, Machine Learning Operations (MLOps), Deep Learning, BTP - II, Honours Project II (Optional), Research Course (Optional).
+
+Semester IX (B.Tech - MS): Research Project.
+
+Semester X (B.Tech - MS): Research Project.
+
+Detailed Course Descriptions:
+
+Each course listing includes the course code, title, credits (L-T-P-C format), and a brief description of the course objectives and outcomes. Specific topics covered in each course are outlined in the syllabus section. Textbooks and references are provided for further reading.
+
+Elective Courses:
+
+Students can choose from a range of elective courses in areas such as:
+
+Computer Science
+
+Mathematics
+
+Humanities
+
+Project Work:
+
+BTP (B.Tech Project) spans across semesters VII and VIII.
+
+Honours Project spans Semesters VI to VIII and Research courses and projects span the final two semesters for B.Tech-MS students.
