@@ -11,7 +11,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import TextLoader, DirectoryLoader
 import os
 from datetime import datetime
-import logging
 
 # Set your API key
 os.environ["GOOGLE_API_KEY"] = "AIzaSyAYew4okjx4jmR7xbKhLj2mAckgtUUbR-k"
@@ -143,13 +142,6 @@ tools = [
     )
 ]
 
-# Set up logging
-logging.basicConfig(
-    filename='chatbot.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-
 # Initialize agent
 agent = initialize_agent(
     tools, 
@@ -175,35 +167,21 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 # Modify chat function to handle errors
 def chat(user_input):
     try:
-        logging.info(f"User Input: {user_input}")
-        
-        # Get context-based response
+        # First try to get relevant context-based response
         qa_response = qa_chain({"question": user_input})
         context_response = qa_response["answer"]
-        logging.info(f"Context Response: {context_response}")
         
-        # Get tool response
+        # Then try to use tools if needed
         tool_response = agent.run(user_input)
-        logging.info(f"Tool Response: {tool_response}")
         
-        # Clean up and combine responses
-        responses = [r.strip() for r in [context_response, tool_response] if r and r.strip()]
-        final_response = "\n\n".join(responses)
-        logging.info(f"Final Response: {final_response}")
+        # Combine responses intelligently
+        final_response = f"{context_response}\n\n{tool_response}" if tool_response else context_response
         
-        return {
-            "final_response": final_response.split("Final Answer:")[-1].strip() if "Final Answer:" in final_response else final_response,
-            "full_log": {
-                "context_response": context_response,
-                "tool_response": tool_response,
-                "final_response": final_response
-            }
-        }
+        return final_response
     except Exception as e:
-        logging.error(f"Error in chat: {str(e)}")
         if "429" in str(e):
-            return {"final_response": "Sorry, I'm a bit busy right now. Please try again in a moment."}
-        return {"final_response": f"I encountered an error: {str(e)}"}
+            return "Sorry, I'm a bit busy right now. Please try again in a moment."
+        return f"I encountered an error: {str(e)}"
 
 def initialize_bot():
     """Initialize the chatbot and return the chat function"""
@@ -218,4 +196,4 @@ if __name__ == "__main__":
     while True:
         user_input = input("Enter your query: ")
         response = chat(user_input)
-        print("Assistant:", response["final_response"])
+        print("Assistant:", response)

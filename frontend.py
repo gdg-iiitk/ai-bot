@@ -1,5 +1,6 @@
 import streamlit as st
 from langchain_app import initialize_bot
+import logging
 
 # Initialize the chatbot
 chat_function = initialize_bot()
@@ -11,11 +12,14 @@ def get_chat_function():
 def get_response(prompt):
     chat = get_chat_function()
     try:
-        with st.spinner("Thinking..."):
-            response = chat(prompt)
-            return response
+        with st.spinner("Processing your question..."):
+            result = chat(prompt)
+            # Log full response to backend but show clean version to user
+            logging.info(f"Full response data: {result.get('full_log', {})}")
+            return result["final_response"]
     except Exception as e:
-        return f"Error: {str(e)}"
+        logging.error(f"Frontend error: {str(e)}")
+        return "I encountered an error. Please try again."
 
 st.title("IIIT Kottayam AI Assistant")
 

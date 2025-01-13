@@ -1,0 +1,28 @@
+2025-01-13 18:27:51,029 - INFO - User Input: what is for dinner today
+2025-01-13 18:27:54,527 - INFO - Context Response: I'm sorry, I don't have access to a real-time menu. I am unable to tell you what is for dinner today.
+2025-01-13 18:27:58,789 - INFO - Tool Response: For dinner today, which is Monday, the menu is Rice, Roti, Veg Kolhapuri, Cabbage Carrot Thoran, Spicy Dal Tadka, Rasam, Chips, Curd, Salad.
+2025-01-13 18:27:58,789 - INFO - Final Response: I'm sorry, I don't have access to a real-time menu. I am unable to tell you what is for dinner today.
+
+For dinner today, which is Monday, the menu is Rice, Roti, Veg Kolhapuri, Cabbage Carrot Thoran, Spicy Dal Tadka, Rasam, Chips, Curd, Salad.
+2025-01-13 18:27:58,789 - INFO - Full response data: {'context_response': "I'm sorry, I don't have access to a real-time menu. I am unable to tell you what is for dinner today.", 'tool_response': 'For dinner today, which is Monday, the menu is Rice, Roti, Veg Kolhapuri, Cabbage Carrot Thoran, Spicy Dal Tadka, Rasam, Chips, Curd, Salad.', 'final_response': "I'm sorry, I don't have access to a real-time menu. I am unable to tell you what is for dinner today.\n\nFor dinner today, which is Monday, the menu is Rice, Roti, Veg Kolhapuri, Cabbage Carrot Thoran, Spicy Dal Tadka, Rasam, Chips, Curd, Salad."}
+2025-01-13 18:28:28,643 - INFO - User Input: when is the endsem this time
+2025-01-13 18:28:30,679 - INFO - Context Response: I don't have access to a specific calendar of events. Therefore, I cannot tell you when the endsem is this time.
+2025-01-13 18:28:34,961 - INFO - Tool Response: The end semester exam starts on November 14th.
+2025-01-13 18:28:34,961 - INFO - Final Response: I don't have access to a specific calendar of events. Therefore, I cannot tell you when the endsem is this time.
+
+The end semester exam starts on November 14th.
+2025-01-13 18:28:34,961 - INFO - Full response data: {'context_response': "I don't have access to a specific calendar of events. Therefore, I cannot tell you when the endsem is this time.", 'tool_response': 'The end semester exam starts on November 14th.', 'final_response': "I don't have access to a specific calendar of events. Therefore, I cannot tell you when the endsem is this time.\n\nThe end semester exam starts on November 14th."}
+2025-01-13 18:48:56,145 - INFO - User Input: what's for lunch today
+2025-01-13 18:49:00,051 - INFO - Context Response: I'm sorry, I don't know what's for lunch today. I am a large language model, able to communicate in response to a wide range of prompts and questions, but my knowledge about your specific lunch plans is limited.
+2025-01-13 18:49:04,814 - INFO - Tool Response: For lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Beetroot Dry, Mulaku Kondattam, Rajma Curry, Pullisherry, Curd, Salad, and Seasonal Fruit.
+2025-01-13 18:49:04,814 - INFO - Final Response: I'm sorry, I don't know what's for lunch today. I am a large language model, able to communicate in response to a wide range of prompts and questions, but my knowledge about your specific lunch plans is limited.
+
+For lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Beetroot Dry, Mulaku Kondattam, Rajma Curry, Pullisherry, Curd, Salad, and Seasonal Fruit.
+2025-01-13 18:49:04,814 - INFO - Full response data: {'context_response': "I'm sorry, I don't know what's for lunch today. I am a large language model, able to communicate in response to a wide range of prompts and questions, but my knowledge about your specific lunch plans is limited.", 'tool_response': 'For lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Beetroot Dry, Mulaku Kondattam, Rajma Curry, Pullisherry, Curd, Salad, and Seasonal Fruit.', 'final_response': "I'm sorry, I don't know what's for lunch today. I am a large language model, able to communicate in response to a wide range of prompts and questions, but my knowledge about your specific lunch plans is limited.\n\nFor lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Beetroot Dry, Mulaku Kondattam, Rajma Curry, Pullisherry, Curd, Salad, and Seasonal Fruit."}
+2025-01-13 19:05:42,430 - INFO - User Input: when is techno cultural fest
+2025-01-13 19:05:46,977 - INFO - Context Response: I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.
+2025-01-13 19:05:49,705 - INFO - Tool Response: The techno-cultural fest is from March 21st to 23rd.
+2025-01-13 19:05:49,705 - INFO - Final Response: I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.
+
+The techno-cultural fest is from March 21st to 23rd.
+2025-01-13 19:05:49,705 - INFO - Full response data: {'context_response': "I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.", 'tool_response': 'The techno-cultural fest is from March 21st to 23rd.', 'final_response': "I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.\n\nThe techno-cultural fest is from March 21st to 23rd."}
