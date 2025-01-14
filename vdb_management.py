@@ -7,7 +7,8 @@ from pathlib import Path
 import json
 import os
 
-class VectorStoreManager:
+class vdb:
+    
     def __init__(self, persist_directory="db", tracking_file="db_files.json", embedding_model="models/embedding-001"):
         self.persist_directory = persist_directory
         self.tracking_file = tracking_file

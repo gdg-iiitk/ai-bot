@@ -21,7 +21,7 @@ def get_response(prompt):
         logging.error(f"Frontend error: {str(e)}")
         return "I encountered an error. Please try again."
 
-st.title("IIIT Kottayam AI Assistant")
+st.title("Mr.G (IIITK AI Assistant)")
 
 # Initialize chat history
 if "messages" not in st.session_state:

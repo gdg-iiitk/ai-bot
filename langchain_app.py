@@ -7,7 +7,7 @@ from langchain.agents import initialize_agent, AgentType
 import os
 import logging
 from datetime import datetime
-from vdb_management import VectorStoreManager
+from vdb_management import vdb
 
 # Set up API key and logging
 os.environ["GOOGLE_API_KEY"] = "AIzaSyAYew4okjx4jmR7xbKhLj2mAckgtUUbR-k"
@@ -26,7 +26,7 @@ logging.basicConfig(filename='chatbot.log', level=logging.INFO)
 
 
 # Initialize vector store manager class:-
-vector_manager = VectorStoreManager(persist_directory="db")
+vector_manager = vdb(persist_directory="db")
 
 # Load context files
 
