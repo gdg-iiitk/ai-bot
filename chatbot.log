@@ -122,3 +122,73 @@ ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory:
 INFO:root:Full response data: {'context_response': "Okay, let's find the best 3-day window in February for your vacation, minimizing class disruption.\n\nHere's the important information to consider from the academic calendar:\n\n*   **February 3rd:** B.Tech BTP/Honours/MS project first review\n*   **February 17th:** Mid Semester Examination Starts (for semester 1)\n\n**Analysis:**\n\n*   The biggest constraint is the Mid-Semester Exams starting on February 17th. It's best to avoid any dates close to this period.\n*   The BTP/Honours/MS project first review on Feb 3rd might clash with your vacation if you're involved, but I assume you are not. If that is not the case you should let me know.\n\n**Recommended Dates:**\n\nGiven the above, the best 3-day window for your vacation in February would be **February 1st to 3rd**.\n\n**Reasoning:**\n\n*   This window is right after classes begin (Jan 1st), so you shouldn't miss any major portion of the courses.\n*   It's well before the mid-semester examinations, ensuring you're not missing any crucial revision time.\n*   The 3rd is Friday, allowing you to either travel on the same day itself or plan to travel back to the campus on the 3rd itself, minimizing your absence from the campus.\n\n**Additional Notes:**\n\n*   **Flexibility:** This is the ideal window based on the academic calendar. However, if you have specific requirements or want a longer break, it might be possible to work around it with some planning and pre-arrangement with professors.\n*   **Check with your professors:** It is always wise to inform your professors about your absence, especially if you are going to miss any important classes or project deadlines.\n*  **Assignments:** Ensure you're aware of any upcoming assignments due after you return.\n\nIn summary, **February 1st to 3rd** is the best option to minimize disruption to your classes during your vacation.\n\nDo you have any other queries or need further assistance?", 'tool_response': 'I suggest you plan your 3-day vacation for February 1st (Saturday) to February 3rd (Monday). This should minimize class conflicts as it includes a weekend.', 'final_response': "Okay, let's find the best 3-day window in February for your vacation, minimizing class disruption.\n\nHere's the important information to consider from the academic calendar:\n\n*   **February 3rd:** B.Tech BTP/Honours/MS project first review\n*   **February 17th:** Mid Semester Examination Starts (for semester 1)\n\n**Analysis:**\n\n*   The biggest constraint is the Mid-Semester Exams starting on February 17th. It's best to avoid any dates close to this period.\n*   The BTP/Honours/MS project first review on Feb 3rd might clash with your vacation if you're involved, but I assume you are not. If that is not the case you should let me know.\n\n**Recommended Dates:**\n\nGiven the above, the best 3-day window for your vacation in February would be **February 1st to 3rd**.\n\n**Reasoning:**\n\n*   This window is right after classes begin (Jan 1st), so you shouldn't miss any major portion of the courses.\n*   It's well before the mid-semester examinations, ensuring you're not missing any crucial revision time.\n*   The 3rd is Friday, allowing you to either travel on the same day itself or plan to travel back to the campus on the 3rd itself, minimizing your absence from the campus.\n\n**Additional Notes:**\n\n*   **Flexibility:** This is the ideal window based on the academic calendar. However, if you have specific requirements or want a longer break, it might be possible to work around it with some planning and pre-arrangement with professors.\n*   **Check with your professors:** It is always wise to inform your professors about your absence, especially if you are going to miss any important classes or project deadlines.\n*  **Assignments:** Ensure you're aware of any upcoming assignments due after you return.\n\nIn summary, **February 1st to 3rd** is the best option to minimize disruption to your classes during your vacation.\n\nDo you have any other queries or need further assistance?\n\nI suggest you plan your 3-day vacation for February 1st (Saturday) to February 3rd (Monday). This should minimize class conflicts as it includes a weekend."}
 INFO:root:User Input: what is for lunch today?
 INFO:root:Full response data: {'context_response': "Okay, based on the mess menu you provided, today being Wednesday, here's what's for lunch:\n\n**Lunch:** Rice, Roti, Palak Dal Tadka, Crunchy Bhindi Fry, Rasam, Papad, Curd, Salad, Banana, Buttermilk", 'tool_response': "Today's lunch is Kerala Rice, Roti, Egg Bhurji, Rajma Curry, Tomato Dal Tadka, Chips, Curd, Salad, Rasam, and Buttermilk.", 'final_response': "Okay, based on the mess menu you provided, today being Wednesday, here's what's for lunch:\n\n**Lunch:** Rice, Roti, Palak Dal Tadka, Crunchy Bhindi Fry, Rasam, Papad, Curd, Salad, Banana, Buttermilk\n\nToday's lunch is Kerala Rice, Roti, Egg Bhurji, Rajma Curry, Tomato Dal Tadka, Chips, Curd, Salad, Rasam, and Buttermilk."}
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for dinner today?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for lunch today
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: tell me about Akarsh sir
+INFO:root:User Input: tell me about the cost of a pasta in milma
+INFO:root:User Input: tell me about u
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: tell me about akarsh sir
+INFO:root:User Input: what does he teach
+INFO:root:User Input: what does akarsh sir teach
+INFO:root:User Input: reffer faculty document
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: who is akarsh nair
+INFO:root:User Input: what does he teach
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: who is akarsh nair,
+INFO:root:User Input: what does he teach
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+ERROR:root:Error in chat: 429 Resource has been exhausted (e.g. check quota).
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is for lunch today
+INFO:root:User Input: what about tommorow
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is today's dinner
+INFO:root:Previous Context: None
+ERROR:root:Error in chat: One input key expected got ['context', 'question']
+INFO:root:User Input: what about tommorow
+INFO:root:Previous Context: None
+ERROR:root:Error in chat: One input key expected got ['context', 'question']
+INFO:root:User Input: what all have talked about before
+INFO:root:Previous Context: None
+ERROR:root:Error in chat: One input key expected got ['context', 'question']
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: I am planning a 3 day vaction in february, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input:  Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:root:User Input: Hey I'm interested in computer networks, which professor should i talk to for projects.
+INFO:root:User Input: I am planning a 3 day vaction in february, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: I am planning a 3 day vaction in march, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:root:User Input: I am planning a 3 day vaction in march, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:root:User Input: I am planning a 3 day vaction in march, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:root:User Input:  Hey I'm interested in computer networks, which professor should i talk to for projects.
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?

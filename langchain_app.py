@@ -72,17 +72,18 @@ def load_context_file(filename):
         logging.error(f"Error loading {filename}: {e}")
         return ""
     
-# Initialize agent
+# Initialize agent with more verbose output
 agent = initialize_agent(
     tools, 
     llm, 
     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, 
     verbose=True,
-    allow_multiple_tools=True
+    handle_parsing_errors=True,
+    return_intermediate_steps=True  # This ensures we get all thinking steps
 )
 
 # Define conversation template
-template = """You are Mr.G, an AI assistant for IIIT Kottayam students.
+template = """You are Mr.G, an AI assistant for IIIT Kottayam students.Give me detailed explanation
 Current conversation:
 {chat_history}
 Context: {context}
@@ -94,20 +95,21 @@ prompt = PromptTemplate(
     template=template
 )
 
-# Initialize retrieval components
+# Initialize retrieval components with session memory
 retrieval_memory = ConversationBufferMemory(
     memory_key="chat_history",
     return_messages=True,
     output_key="answer"
 )
 
-# Create retrieval chain
+# Create retrieval chain with memory but without persistence
 retrieval_chain = ConversationalRetrievalChain.from_llm(
     llm=llm,
     retriever=vector_manager.get_retriever(),
-    memory=retrieval_memory,
-    get_chat_history=lambda h: h,
+    memory=retrieval_memory,  # Add memory back
+    get_chat_history=lambda h: str(h),  # Convert history to string
     combine_docs_chain_kwargs={"prompt": prompt, "document_variable_name": "context"},
+    return_source_documents=True,
     verbose=True
 )
 
@@ -115,19 +117,27 @@ def chat(user_input):
     try:
         logging.info(f"User Input: {user_input}")
         
+        # Get response from retrieval chain with chat history
         retrieval_response = retrieval_chain({"question": user_input})
-        context_response = retrieval_response["answer"]
-        tool_response = agent.run(user_input)
+        context_response = "💡 Based on the knowledge base:\n" + retrieval_response["answer"]
         
-        responses = [r.strip() for r in [context_response, tool_response] if r and r.strip()]
-        final_response = "\n\n".join(responses)
+        # Get response from tool-based agent
+        agent_response = agent(user_input)
+        tool_response = {
+            "thoughts": agent_response["intermediate_steps"],
+            "final_answer": agent_response.get("output", "")
+        }
+        
+        # Combine responses
+        final_response = tool_response["final_answer"]
         
         return {
-            "final_response": final_response.split("Final Answer:")[-1].strip() if "Final Answer:" in final_response else final_response,
+            "final_response": final_response,
             "full_log": {
                 "context_response": context_response,
                 "tool_response": tool_response,
-                "final_response": final_response
+                "source_docs": retrieval_response.get("source_documents", []),
+                "chat_history": retrieval_chain.memory.chat_memory.messages if retrieval_chain.memory else []
             }
         }
     except Exception as e:
@@ -137,6 +147,8 @@ def chat(user_input):
 def initialize_bot():
     """Initialize the chatbot and return the chat function"""
     vector_manager.initialize_from_directory("./data")
+    # Reset memory for new session
+    retrieval_chain.memory.clear()
     return chat
 
 if __name__ == "__main__":
