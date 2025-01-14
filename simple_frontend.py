@@ -1,6 +1,9 @@
 import streamlit as st
 from langchain_app import initialize_bot
 import logging
+import os
+
+os.environ["GOOGLE_API_KEY"] = "AIzaSyAYew4okjx4jmR7xbKhLj2mAckgtUUbR-k"
 
 # Initialize the chatbot
 chat_function = initialize_bot()

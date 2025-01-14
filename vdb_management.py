@@ -1,5 +1,5 @@
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import TextLoader, DirectoryLoader
 from datetime import datetime
@@ -9,29 +9,20 @@ import os
 
 class vdb:
     
-    def __init__(self, persist_directory="db", tracking_file="db_files.json", embedding_model="models/embedding-001"):
+    def __init__(self, persist_directory="db", tracking_file="db_files.json"):  
         self.persist_directory = persist_directory
         self.tracking_file = tracking_file
-        self.embeddings = GoogleGenerativeAIEmbeddings(model=embedding_model)
+        #initializes the embedder/vectorizer
+        self.embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001",google_api_key=os.environ["GOOGLE_API_KEY"])
         
         # Create persist directory if it doesn't exist
         if not os.path.exists(persist_directory):
             os.makedirs(persist_directory)
-            
-        self.vectorstore = Chroma(
+        #initilizes the vdb
+        self.chromadb = Chroma(
             persist_directory=persist_directory,
             embedding_function=self.embeddings
         )
-        
-    def _load_tracking(self):
-        if os.path.exists(self.tracking_file):
-            with open(self.tracking_file, 'r') as f:
-                return json.load(f)
-        return {}
-
-    def _save_tracking(self, tracking_data):
-        with open(self.tracking_file, 'w') as f:
-            json.dump(tracking_data, f, indent=2)
 
     def add_file(self, file_path):
         try:
@@ -50,8 +41,8 @@ class vdb:
             )
             texts = text_splitter.split_documents(documents)
             
-            ids = self.vectorstore.add_documents(texts)
-            self.vectorstore.persist()
+            ids = self.chromadb.add_documents(texts)
+            self.chromadb.persist()
             
             tracking_data[resolved_path] = {
                 'chunk_ids': ids,
@@ -79,8 +70,8 @@ class vdb:
                 return f"File {file_path} not found in database"
             
             chunk_ids = tracking_data[resolved_path]['chunk_ids']
-            self.vectorstore.delete(chunk_ids)
-            self.vectorstore.persist()
+            self.chromadb.delete(chunk_ids)
+            self.chromadb.persist()
             
             del tracking_data[resolved_path]
             self._save_tracking(tracking_data)
@@ -104,7 +95,7 @@ class vdb:
         }
 
     def search_similar(self, query, k=3):
-        docs = self.vectorstore.similarity_search(query, k=k)
+        docs = self.chromadb.similarity_search(query, k=k)
         return [
             {
                 'content': doc.page_content,
@@ -115,7 +106,7 @@ class vdb:
         ]
 
     def get_collection_stats(self):
-        collection = self.vectorstore.get()
+        collection = self.chromadb.get()
         tracking_data = self._load_tracking()
         
         return {
@@ -126,8 +117,8 @@ class vdb:
 
     def clear_database(self):
         try:
-            self.vectorstore.delete_collection()
-            self.vectorstore.persist()
+            self.chromadb.delete_collection()
+            self.chromadb.persist()
             if os.path.exists(self.tracking_file):
                 os.remove(self.tracking_file)
             return "Database cleared successfully"
@@ -136,7 +127,7 @@ class vdb:
 
     def get_document_by_id(self, doc_id):
         try:
-            collection = self.vectorstore.get([doc_id])
+            collection = self.chromadb.get([doc_id])
             if collection['ids']:
                 return {
                     'id': doc_id,
@@ -149,7 +140,7 @@ class vdb:
 
     def get_retriever(self, search_kwargs={'k': 5}):
         """Get a retriever instance for use with LangChain chains"""
-        return self.vectorstore.as_retriever(search_kwargs=search_kwargs)
+        return self.chromadb.as_retriever(search_kwargs=search_kwargs)
 
     def initialize_from_directory(self, data_dir, glob_pattern="**/*.txt"):
         """Initialize the vector store with all matching files from a directory"""
@@ -161,3 +152,13 @@ class vdb:
             return self.bulk_add_files(file_paths)
         except Exception as e:
             return f"Error initializing from directory: {str(e)}"
+
+    def _load_tracking(self):
+        if os.path.exists(self.tracking_file):
+            with open(self.tracking_file, 'r') as f:
+                return json.load(f)
+        return {}
+
+    def _save_tracking(self, tracking_data):
+        with open(self.tracking_file, 'w') as f:
+            json.dump(tracking_data, f, indent=2)

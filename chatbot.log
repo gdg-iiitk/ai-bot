@@ -195,3 +195,14 @@ INFO:root:User Input: Hey today i want to give treat to my friends . My budget i
 INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
 INFO:root:User Input: helll
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for lunch today?
+INFO:root:User Input: how about breakfast?
+INFO:root:User Input: what were we talking about
+INFO:root:User Input: tell me about akarsh sir
+INFO:root:User Input: so what does he do
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: tell me about akarsh sir
+INFO:root:User Input: tell me more
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is for dinner today at mess?

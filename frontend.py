@@ -2,12 +2,15 @@ import streamlit as st
 from langchain_app import initialize_bot
 import logging
 
-# Initialize the chatbot
-chat_function = initialize_bot()
-
 @st.cache_resource
+def initialize_cached_bot():
+    return initialize_bot()
+
+# Initialize the chatbot
+chat_function = initialize_cached_bot()
+
 def get_chat_function():
-    return chat_function
+    return initialize_cached_bot()
 
 def display_thinking_process(placeholder, response_data, streaming=False):
     # Handle the case where response_data is a DeltaGenerator

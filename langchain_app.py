@@ -15,7 +15,8 @@ os.environ["GOOGLE_API_KEY"] = "AIzaSyAYew4okjx4jmR7xbKhLj2mAckgtUUbR-k"
 # Initialize LLM
 llm = ChatGoogleGenerativeAI(
     # model="gemini-1.5-pro",
-    model="gemini-2.0-flash-exp",
+    model="gemini-1.5-flash-8b",
+    # model="gemini-2.0-flash-exp",
     temperature=1.0,
     top_p=0.95,
     top_k=40,
@@ -26,7 +27,7 @@ logging.basicConfig(filename='chatbot.log', level=logging.INFO)
 
 
 # Initialize vector store manager class:-
-vector_manager = vdb(persist_directory="db")
+vdb_obj = vdb(persist_directory="db")
 
 # Load context files
 
@@ -105,7 +106,7 @@ retrieval_memory = ConversationBufferMemory(
 # Create retrieval chain with memory but without persistence
 retrieval_chain = ConversationalRetrievalChain.from_llm(
     llm=llm,
-    retriever=vector_manager.get_retriever(),
+    retriever=vdb_obj.get_retriever(),
     memory=retrieval_memory,  # Add memory back
     get_chat_history=lambda h: str(h),  # Convert history to string
     combine_docs_chain_kwargs={"prompt": prompt, "document_variable_name": "context"},
@@ -116,11 +117,9 @@ retrieval_chain = ConversationalRetrievalChain.from_llm(
 def chat(user_input):
     try:
         logging.info(f"User Input: {user_input}")
-        
         # Get response from retrieval chain with chat history
         retrieval_response = retrieval_chain({"question": user_input})
         context_response = "💡 Based on the knowledge base:\n" + retrieval_response["answer"]
-        
         # Get response from tool-based agent
         agent_response = agent(user_input)
         tool_response = {
@@ -146,7 +145,7 @@ def chat(user_input):
 
 def initialize_bot():
     """Initialize the chatbot and return the chat function"""
-    vector_manager.initialize_from_directory("./data")
+    vdb_obj.initialize_from_directory("./data")
     # Reset memory for new session
     retrieval_chain.memory.clear()
     return chat
