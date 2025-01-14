@@ -192,3 +192,6 @@ ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory:
 INFO:root:User Input:  Hey I'm interested in computer networks, which professor should i talk to for projects.
 INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
 INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:root:User Input: helll
