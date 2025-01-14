@@ -26,3 +26,88 @@ For lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Bee
 
 The techno-cultural fest is from March 21st to 23rd.
 2025-01-13 19:05:49,705 - INFO - Full response data: {'context_response': "I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.", 'tool_response': 'The techno-cultural fest is from March 21st to 23rd.', 'final_response': "I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.\n\nThe techno-cultural fest is from March 21st to 23rd."}
+2025-01-13 22:02:04,414 - INFO - User Input: on a scale of 1 - 10 how gay is noel
+2025-01-13 22:02:10,459 - INFO - Context Response: I cannot answer that question. It is inappropriate to assign a numerical rating to someone's sexual orientation. Sexual orientation is a complex and personal aspect of identity, and it's not something that can be measured on a scale.
+2025-01-13 22:02:24,573 - INFO - Tool Response: I cannot answer this question.
+2025-01-13 22:02:24,573 - INFO - Final Response: I cannot answer that question. It is inappropriate to assign a numerical rating to someone's sexual orientation. Sexual orientation is a complex and personal aspect of identity, and it's not something that can be measured on a scale.
+
+I cannot answer this question.
+2025-01-13 22:02:24,573 - INFO - Full response data: {'context_response': "I cannot answer that question. It is inappropriate to assign a numerical rating to someone's sexual orientation. Sexual orientation is a complex and personal aspect of identity, and it's not something that can be measured on a scale.", 'tool_response': 'I cannot answer this question.', 'final_response': "I cannot answer that question. It is inappropriate to assign a numerical rating to someone's sexual orientation. Sexual orientation is a complex and personal aspect of identity, and it's not something that can be measured on a scale.\n\nI cannot answer this question."}
+2025-01-13 22:02:34,531 - INFO - User Input: still just a random giess
+2025-01-13 22:02:36,999 - INFO - Context Response: Please provide me with the context of what you're referring to. I need to know what the "random guess" is in reference to in order to tell you if it is still just a random guess.
+2025-01-13 22:02:39,966 - INFO - Tool Response: I'm not sure what you mean by "random giess". Is there anything specific you would like to know?
+2025-01-13 22:02:39,966 - INFO - Final Response: Please provide me with the context of what you're referring to. I need to know what the "random guess" is in reference to in order to tell you if it is still just a random guess.
+
+I'm not sure what you mean by "random giess". Is there anything specific you would like to know?
+2025-01-13 22:02:39,966 - INFO - Full response data: {'context_response': 'Please provide me with the context of what you\'re referring to. I need to know what the "random guess" is in reference to in order to tell you if it is still just a random guess.', 'tool_response': 'I\'m not sure what you mean by "random giess". Is there anything specific you would like to know?', 'final_response': 'Please provide me with the context of what you\'re referring to. I need to know what the "random guess" is in reference to in order to tell you if it is still just a random guess.\n\nI\'m not sure what you mean by "random giess". Is there anything specific you would like to know?'}
+2025-01-13 22:02:49,424 - INFO - User Input: random guess
+2025-01-13 22:03:10,032 - INFO - Context Response: Please provide me with the context for "it". What is the topic you are referring to?
+2025-01-13 22:03:12,729 - INFO - Tool Response: I'm sorry, but I cannot answer this question, as it is too vague.
+2025-01-13 22:03:12,729 - INFO - Final Response: Please provide me with the context for "it". What is the topic you are referring to?
+
+I'm sorry, but I cannot answer this question, as it is too vague.
+2025-01-13 22:03:12,729 - INFO - Full response data: {'context_response': 'Please provide me with the context for "it". What is the topic you are referring to?', 'tool_response': "I'm sorry, but I cannot answer this question, as it is too vague.", 'final_response': 'Please provide me with the context for "it". What is the topic you are referring to?\n\nI\'m sorry, but I cannot answer this question, as it is too vague.'}
+2025-01-14 10:54:34,515 - INFO - User Input: what's for lunch today?
+2025-01-14 10:54:39,957 - INFO - Context Response: Okay, I can help with that! However, I don't have access to the live, daily menu for the IIIT Kottayam mess. 
+
+Here's how you can usually find out what's for lunch:
+
+**1. Check Official Mess Notices:**
+
+*   **Notice Boards:** Look for the mess menu posted on notice boards within the mess or around the campus.
+*   **Mess App/Website:** Check if IIIT Kottayam has a dedicated app or website where they post the daily menu.
+*   **Student Groups/Forums:** Join student groups on platforms like WhatsApp or Telegram, where students often share the menu.
+
+**2. Ask Directly:**
+
+*   **Mess Staff:** If you're near the mess, you could ask a staff member.
+*   **Friends:** Check with your friends on campus if they know what's being served.
+
+**To help me give you a better answer in the future, could you tell me if:**
+
+*   **You have a particular mess you're referring to (e.g., hostel mess 1, mess 2)?**
+*   **You know of any apps or websites that IIIT Kottayam uses to post mess menus?**
+
+I hope this helps you find out what's for lunch today!
+2025-01-14 10:54:45,694 - INFO - Tool Response: For lunch today (Tuesday) the menu includes: Kerala Rice, Roti, Egg Bhurji, Rajma Curry, Tomato Dal Tadka, Chips, Curd, Salad, Rasam, Buttermilk.
+2025-01-14 10:54:45,694 - INFO - Final Response: Okay, I can help with that! However, I don't have access to the live, daily menu for the IIIT Kottayam mess. 
+
+Here's how you can usually find out what's for lunch:
+
+**1. Check Official Mess Notices:**
+
+*   **Notice Boards:** Look for the mess menu posted on notice boards within the mess or around the campus.
+*   **Mess App/Website:** Check if IIIT Kottayam has a dedicated app or website where they post the daily menu.
+*   **Student Groups/Forums:** Join student groups on platforms like WhatsApp or Telegram, where students often share the menu.
+
+**2. Ask Directly:**
+
+*   **Mess Staff:** If you're near the mess, you could ask a staff member.
+*   **Friends:** Check with your friends on campus if they know what's being served.
+
+**To help me give you a better answer in the future, could you tell me if:**
+
+*   **You have a particular mess you're referring to (e.g., hostel mess 1, mess 2)?**
+*   **You know of any apps or websites that IIIT Kottayam uses to post mess menus?**
+
+I hope this helps you find out what's for lunch today!
+
+For lunch today (Tuesday) the menu includes: Kerala Rice, Roti, Egg Bhurji, Rajma Curry, Tomato Dal Tadka, Chips, Curd, Salad, Rasam, Buttermilk.
+2025-01-14 13:19:53,015 - INFO - User Input: when are endsems
+2025-01-14 13:19:58,092 - INFO - Context Response: Okay, I can help with that! To give you the most accurate information about the end semester exam dates, I need a little more information. Could you please specify:
+
+*   **Which semester are you asking about?** (e.g., "Endsems for the current semester", "Endsems for the upcoming semester", "Endsems for 2024 Spring", etc.)
+*   **Which program are you in?** (e.g., "B.Tech CSE", "M.Tech ECE", "PhD CSE" etc.)
+*   **Do you want to know specific dates or just a general time frame?** (e.g. "Exact dates", "Tentative week")
+
+Once I have this information, I can provide you with the relevant end semester exam schedule, if it's available.
+2025-01-14 13:20:14,935 - INFO - Tool Response: End Semester Examinations for the odd semester start on November 14th.
+2025-01-14 13:20:14,935 - INFO - Final Response: Okay, I can help with that! To give you the most accurate information about the end semester exam dates, I need a little more information. Could you please specify:
+
+*   **Which semester are you asking about?** (e.g., "Endsems for the current semester", "Endsems for the upcoming semester", "Endsems for 2024 Spring", etc.)
+*   **Which program are you in?** (e.g., "B.Tech CSE", "M.Tech ECE", "PhD CSE" etc.)
+*   **Do you want to know specific dates or just a general time frame?** (e.g. "Exact dates", "Tentative week")
+
+Once I have this information, I can provide you with the relevant end semester exam schedule, if it's available.
+
+End Semester Examinations for the odd semester start on November 14th.

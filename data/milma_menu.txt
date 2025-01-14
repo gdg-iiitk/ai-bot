@@ -1,0 +1,166 @@
+Here is the menu from Milma Cafe one of the most popular cafes/canteen in the college campus, 
+
+
+---
+
+Milma Cafe Menu
+
+Lime Juice
+
+Fresh Lime: 20.00
+
+Soda Lime: 30.00
+
+Mint Lime: 45.00
+
+Ginger Lime: 45.00
+
+Virgin Mojito: 50.00
+
+
+Mud Shakes
+
+Mississippi Mud: 110.00
+
+Oreo Desperado: 110.00
+
+Kitkat Blast: 120.00
+
+Snickers Mud: 120.00
+
+Nutella Mud: 120.00
+
+Dairymilk Mud: 120.00
+
+
+Cold Coffee
+
+Hard Rock Coffee: 90.00
+
+Normal Cold Coffee: 80.00
+
+Belgium Coffee: 80.00
+
+Oreo Coffee: 80.00
+
+
+Lassi
+
+Sweet Lassi: 50.00
+
+Mango Lassi: 60.00
+
+Honey Lassi: 60.00
+
+Strawberry Lassi: 60.00
+
+Chocolate Lassi: 60.00
+
+Blueberry Lassi: 60.00
+
+
+Milk Shakes
+
+Belgium Chocolate: 90.00
+
+Ferrero Rocher: 90.00
+
+Oreo Milk Shake: 90.00
+
+Belgium Chips: 90.00
+
+Kitkat Milk Shake: 90.00
+
+Vanilla Shake: 90.00
+
+Strawberry Shake: 70.00
+
+Mango Milk Shake: 70.00
+
+Snickers Shake: 90.00
+
+Ista Pista: 90.00
+
+Blackcurrant: 90.00
+
+Kesar Pista: 90.00
+
+Butter Scotch: 90.00
+
+
+Other Items
+
+All Variety of Scope Ice Creams With Biscuit Cup
+
+
+
+---
+
+Milma Cafe Snacks & Beverages
+
+Beverages
+
+Tea: 12.00
+
+Bru Coffee: 14.00
+
+Strong Coffee: 17.00
+
+Lime Tea: 20.00
+
+Boost Coffee: 22.00
+
+Bournvita Coffee: 22.00
+
+Horlicks Coffee: 22.00
+
+
+Snacks
+
+Cutlet (Chicken): 25.00
+
+Chicken Sandwich: 60.00
+
+Samosa: 18.00
+
+Chicken Bread Sandwich: 30.00
+
+Bread Pakoda: 20.00
+
+Uzhunu Vada: 12.00
+
+Banana Boli: 15.00
+
+Burger Chicken: 70.00
+
+Burger Veg: 60.00
+
+
+Maggi
+
+Maggi (Normal): 30.00
+
+Maggi (Normal Double): 60.00
+
+Maggi (Peri Peri): 45.00
+
+Maggi (Peri Peri Double): 90.00
+
+Maggi Cheese: 45.00
+
+Maggi Cheese (Double): 90.00
+
+Egg Maggi (N): 60.00
+
+Egg Maggi (D): 120.00
+
+
+Omelet
+
+Omelet (Double): 45.00
+
+Bread Omelet: 60.00
+
+Chilly Potato: 80.00
+
+Chinese Bhel: 90.00

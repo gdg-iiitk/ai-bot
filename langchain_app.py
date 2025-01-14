@@ -1,21 +1,18 @@
-from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
-from langchain.schema import Document
 from langchain.prompts import PromptTemplate
 from langchain.tools import Tool
 from langchain.agents import initialize_agent, AgentType
-from langchain.vectorstores import Chroma
-from langchain.chains import ConversationChain
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import TextLoader, DirectoryLoader
 import os
-from datetime import datetime
 import logging
+from datetime import datetime
+from vdb_management import VectorStoreManager
 
-# Set your API key
+# Set up API key and logging
 os.environ["GOOGLE_API_KEY"] = "AIzaSyAYew4okjx4jmR7xbKhLj2mAckgtUUbR-k"
 
+# Initialize LLM
 llm = ChatGoogleGenerativeAI(
     # model="gemini-1.5-pro",
     model="gemini-2.0-flash-exp",
@@ -25,171 +22,105 @@ llm = ChatGoogleGenerativeAI(
     max_output_tokens=8192,
 )
 
-# Initialize embeddings
-embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-
-# Initialize ChromaDB
-PERSIST_DIRECTORY = "db"
-vectorstore = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=embeddings)
-
-def add_document(file_path):
-    """Add a document to the vector database"""
-    loader = TextLoader(file_path)
-    documents = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200
-    )
-    texts = text_splitter.split_documents(documents)
-    vectorstore.add_documents(texts)
-    vectorstore.persist()
-    return f"Added {len(texts)} chunks from {file_path}"
-
-def add_directory(dir_path):
-    """Add all text files from a directory to the vector database"""
-    loader = DirectoryLoader(dir_path, glob="**/*.txt")
-    documents = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200
-    )
-    texts = text_splitter.split_documents(documents)
-    vectorstore.add_documents(texts)
-    vectorstore.persist()
-    return f"Added {len(texts)} chunks from directory {dir_path}"
-
-def add_text(text, metadata=None):
-    """Add raw text directly to the vector database"""
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=200
-    )
-    texts = text_splitter.split_text(text)
-    docs = [Document(page_content=t, metadata=metadata or {}) for t in texts]
-    vectorstore.add_documents(docs)
-    vectorstore.persist()
-    return f"Added {len(texts)} chunks of text"
-
-def search_knowledge_base(query, k=3):
-    """Search the vector database for relevant context"""
-    docs = vectorstore.similarity_search(query, k=k)
-    return "\n".join([doc.page_content for doc in docs])
-
-def clear_database():
-    """Clear all documents from the vector database"""
-    vectorstore.delete_collection()
-    vectorstore.persist()
-    return "Database cleared"
-
-# Create a conversation memory
-memory = ConversationBufferMemory()
-
-# Define the conversation template
-template = """You are an AI assistant for IIIT Kottayam students.
-Current conversation:
-{history}
-Human: {input}
-Assistant:"""
-
-prompt = PromptTemplate(input_variables=["history", "input"], template=template)
-
-# Create the conversation chain
-conversation = ConversationChain(
-    llm=llm,
-    memory=memory,
-    prompt=prompt,
-    verbose=True
-)
+logging.basicConfig(filename='chatbot.log', level=logging.INFO)
 
 
-# Define tools
-with open("./data/premade/mess_menu.txt", "r") as file:
-    mess_menu = file.read()
-with open("./data/premade/inst_ calender.txt", "r") as file:
-    inst_calendar = file.read()
+# Initialize vector store manager class:-
+vector_manager = VectorStoreManager(persist_directory="db")
 
-def load_mess_menu(input_str=None):
-    """Load the mess menu context into the conversation"""
-    return f"This is the mess menu of the campus. Please use this context to answer queries about the menu: {mess_menu}"
+# Load context files
 
-def load_calendar(input_str=None):
-    """Load the institute calendar context into the conversation"""
-    return f"This is the academic calendar of IIIT Kottayam. Please use this context to answer queries about academic dates and holidays: {inst_calendar}"
-
-def get_time_context(arg):
-    """Get current date and time information"""
-    print(arg)
-    now = datetime.now()
-    return f"""Current time context:
-- Date: {now.strftime('%A, %B %d, %Y')}
-- Time: {now.strftime('%I:%M %p')}
-- Day of week: {now.strftime('%A')}"""
-
+# Define tools with context loading
 tools = [
     Tool(
         name="Load Mess Menu",
-        func=load_mess_menu,
-        description="Use this tool to load the mess menu context when the query is related to food, mess, or menu.",
+        func=lambda x: f"Mess menu context: {load_context_file('mess_menu.txt')}",
+        description="Load mess menu context for food-related queries",
     ),
     Tool(
         name="Load Academic Calendar",
-        func=load_calendar,
-        description="Use this tool to load the academic calendar when the query is related to academic dates, holidays, or institute events like exams.",
+        func=lambda x: f"Academic calendar context: {load_context_file('inst_calender.txt')}",
+        description="Load academic calendar context for academic dates and holidays",
     ),
     Tool(
         name="Get Date and Time Context",
-        func=get_time_context,
-        description="Use this tool to get the current date and time information and what day it is"
+        func=lambda x: f"Current time context: {datetime.now().strftime('%A, %B %d, %Y %I:%M %p')}",
+        description="Get current date and time information",
+    ),
+    Tool(
+        name="Load Curriculum",
+        func=lambda x: f"Curriculum context: {load_context_file('caricululm.txt')}",
+        description="Load curriculum context for course-related queries",
+    ),
+    Tool(
+        name="Load Milma Menu",
+        func=lambda x: f"Milma Cafe menu context: {load_context_file('milma_menu.txt')}",
+        description="Load Milma Cafe menu context for food-related queries",
+    ),
+    Tool(
+        name="Load Faculty Details",
+        func=lambda x: f"Faculty details context: {load_context_file('faculty_details.txt')}",
+        description="Load faculty details context for faculty-related queries",
     )
 ]
 
-# Set up logging
-logging.basicConfig(
-    filename='chatbot.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-
+def load_context_file(filename):
+    try:
+        with open(f"./data/{filename}", "r") as file:
+            return file.read()
+    except Exception as e:
+        logging.error(f"Error loading {filename}: {e}")
+        return ""
+    
 # Initialize agent
 agent = initialize_agent(
     tools, 
     llm, 
     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, 
     verbose=True,
-    allow_multiple_tools=True  # Enable multiple tools
+    allow_multiple_tools=True
 )
 
-# Replace the old conversation chain with a retrieval chain
-qa_memory = ConversationBufferMemory(
+# Define conversation template
+template = """You are Mr.G, an AI assistant for IIIT Kottayam students.
+Current conversation:
+{chat_history}
+Context: {context}
+Human: {question}
+Assistant:"""
+
+prompt = PromptTemplate(
+    input_variables=["chat_history", "context", "question"], 
+    template=template
+)
+
+# Initialize retrieval components
+retrieval_memory = ConversationBufferMemory(
     memory_key="chat_history",
-    return_messages=True
+    return_messages=True,
+    output_key="answer"
 )
 
-qa_chain = ConversationalRetrievalChain.from_llm(
+# Create retrieval chain
+retrieval_chain = ConversationalRetrievalChain.from_llm(
     llm=llm,
-    retriever=vectorstore.as_retriever(search_kwargs={'k': 3}),
-    memory=qa_memory,
+    retriever=vector_manager.get_retriever(),
+    memory=retrieval_memory,
+    get_chat_history=lambda h: h,
+    combine_docs_chain_kwargs={"prompt": prompt, "document_variable_name": "context"},
     verbose=True
 )
 
-# Modify chat function to handle errors
 def chat(user_input):
     try:
         logging.info(f"User Input: {user_input}")
         
-        # Get context-based response
-        qa_response = qa_chain({"question": user_input})
-        context_response = qa_response["answer"]
-        logging.info(f"Context Response: {context_response}")
-        
-        # Get tool response
+        retrieval_response = retrieval_chain({"question": user_input})
+        context_response = retrieval_response["answer"]
         tool_response = agent.run(user_input)
-        logging.info(f"Tool Response: {tool_response}")
         
-        # Clean up and combine responses
         responses = [r.strip() for r in [context_response, tool_response] if r and r.strip()]
         final_response = "\n\n".join(responses)
-        logging.info(f"Final Response: {final_response}")
         
         return {
             "final_response": final_response.split("Final Answer:")[-1].strip() if "Final Answer:" in final_response else final_response,
@@ -201,21 +132,18 @@ def chat(user_input):
         }
     except Exception as e:
         logging.error(f"Error in chat: {str(e)}")
-        if "429" in str(e):
-            return {"final_response": "Sorry, I'm a bit busy right now. Please try again in a moment."}
         return {"final_response": f"I encountered an error: {str(e)}"}
 
 def initialize_bot():
     """Initialize the chatbot and return the chat function"""
-    if not os.path.exists(PERSIST_DIRECTORY):
-        add_document("./data/premade/mess_menu.txt")
-        add_document("./data/premade/inst_calender.txt")
-    
+    vector_manager.initialize_from_directory("./data")
     return chat
 
 if __name__ == "__main__":
     initialize_bot()
     while True:
-        user_input = input("Enter your query: ")
+        user_input = input("\nEnter your query (or 'quit' to exit): ")
+        if user_input.lower() == 'quit':
+            break
         response = chat(user_input)
         print("Assistant:", response["final_response"])

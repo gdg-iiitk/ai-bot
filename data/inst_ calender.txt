@@ -1,6 +1,8 @@
 Indian Institute of Information Technology Kottayam - Academic Calendar Data
 
-Even Semester (Sem II, IV, VI, VIII)
+each sem has its own endsem and midsem
+even sem starts in jan and ends in may
+odd sem starts in july and ends in november
 
 Institute Holidays:
 
@@ -22,7 +24,7 @@ June 7th : Id-ul-Zuha (Bakrid) *
 
 Mid Semester Examinations:
 
-Feb 17th : Mid Semester Examination Starts
+Feb 17th : Mid Semester for sem 1 Examination Starts
 
 
 End Semester Examinations:
