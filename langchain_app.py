@@ -12,6 +12,9 @@ from vdb_management import vdb
 # Set up API key and logging
 os.environ["GOOGLE_API_KEY"] = "AIzaSyAYew4okjx4jmR7xbKhLj2mAckgtUUbR-k"
 
+# Initialize logging
+logging.basicConfig(filename='chatbot.log', level=logging.INFO)
+
 # Initialize LLM
 llm = ChatGoogleGenerativeAI(
     # model="gemini-1.5-pro",
@@ -23,13 +26,16 @@ llm = ChatGoogleGenerativeAI(
     max_output_tokens=8192,
 )
 
-logging.basicConfig(filename='chatbot.log', level=logging.INFO)
-
-
-# Initialize vector store manager class:-
+# Initialize vector store manager for retrieval only
 vdb_obj = vdb(persist_directory="db")
 
-# Load context files
+def load_context_file(filename):
+    try:
+        with open(f"./data/{filename}", "r") as file:
+            return file.read()
+    except Exception as e:
+        logging.error(f"Error loading {filename}: {e}")
+        return ""
 
 # Define tools with context loading
 tools = [
@@ -65,22 +71,14 @@ tools = [
     )
 ]
 
-def load_context_file(filename):
-    try:
-        with open(f"./data/{filename}", "r") as file:
-            return file.read()
-    except Exception as e:
-        logging.error(f"Error loading {filename}: {e}")
-        return ""
-    
-# Initialize agent with more verbose output
+# Initialize agent
 agent = initialize_agent(
     tools, 
     llm, 
     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, 
     verbose=True,
     handle_parsing_errors=True,
-    return_intermediate_steps=True  # This ensures we get all thinking steps
+    return_intermediate_steps=True
 )
 
 # Define conversation template
@@ -103,12 +101,12 @@ retrieval_memory = ConversationBufferMemory(
     output_key="answer"
 )
 
-# Create retrieval chain with memory but without persistence
+# Create retrieval chain with memory
 retrieval_chain = ConversationalRetrievalChain.from_llm(
     llm=llm,
     retriever=vdb_obj.get_retriever(),
-    memory=retrieval_memory,  # Add memory back
-    get_chat_history=lambda h: str(h),  # Convert history to string
+    memory=retrieval_memory,
+    get_chat_history=lambda h: str(h),
     combine_docs_chain_kwargs={"prompt": prompt, "document_variable_name": "context"},
     return_source_documents=True,
     verbose=True
@@ -117,17 +115,15 @@ retrieval_chain = ConversationalRetrievalChain.from_llm(
 def chat(user_input):
     try:
         logging.info(f"User Input: {user_input}")
-        # Get response from retrieval chain with chat history
         retrieval_response = retrieval_chain({"question": user_input})
         context_response = "💡 Based on the knowledge base:\n" + retrieval_response["answer"]
-        # Get response from tool-based agent
+        
         agent_response = agent(user_input)
         tool_response = {
             "thoughts": agent_response["intermediate_steps"],
             "final_answer": agent_response.get("output", "")
         }
         
-        # Combine responses
         final_response = tool_response["final_answer"]
         
         return {
@@ -145,8 +141,6 @@ def chat(user_input):
 
 def initialize_bot():
     """Initialize the chatbot and return the chat function"""
-    vdb_obj.initialize_from_directory("./data")
-    # Reset memory for new session
     retrieval_chain.memory.clear()
     return chat
 
