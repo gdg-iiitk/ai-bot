@@ -6,10 +6,17 @@ from datetime import datetime
 from pathlib import Path
 import json
 import os
+import logging
 
 class vdb:
-    
     def __init__(self, persist_directory="db", tracking_file="db_files.json"):  
+        # Configure logging
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s'
+        )
+        self.logger = logging.getLogger(__name__)
+        
         self.persist_directory = persist_directory
         self.tracking_file = tracking_file
         #initializes the embedder/vectorizer
@@ -26,13 +33,19 @@ class vdb:
 
     def add_file(self, file_path):
         try:
+            self.logger.info(f"Attempting to add file: {file_path}")
             tracking_data = self._load_tracking()
             resolved_path = str(Path(file_path).resolve())
             
             # Check if file already exists
             if resolved_path in tracking_data:
+                self.logger.warning(f"File already exists in database: {file_path}")
                 return f"File {file_path} already exists in the database"
             
+            if not os.path.exists(file_path):
+                self.logger.error(f"File not found: {file_path}")
+                return f"Error: File {file_path} does not exist"
+
             loader = TextLoader(file_path)
             documents = loader.load()
             text_splitter = RecursiveCharacterTextSplitter(
@@ -41,8 +54,9 @@ class vdb:
             )
             texts = text_splitter.split_documents(documents)
             
+            self.logger.info(f"Adding {len(texts)} chunks to vector database")
             ids = self.chromadb.add_documents(texts)
-            self.chromadb.persist()
+            # Remove persist() call - ChromaDB handles persistence automatically
             
             tracking_data[resolved_path] = {
                 'chunk_ids': ids,
@@ -51,14 +65,19 @@ class vdb:
             }
             self._save_tracking(tracking_data)
             
+            self.logger.info(f"Successfully added file: {file_path}")
             return f"Added {len(texts)} chunks from {file_path}"
         except Exception as e:
+            self.logger.error(f"Error adding file {file_path}: {str(e)}", exc_info=True)
             return f"Error adding file: {str(e)}"
 
     def bulk_add_files(self, file_paths):
+        self.logger.info(f"Starting bulk addition of {len(file_paths)} files")
         results = {}
         for file_path in file_paths:
+            self.logger.info(f"Processing file: {file_path}")
             results[file_path] = self.add_file(file_path)
+        self.logger.info("Bulk addition completed")
         return results
 
     def remove_file(self, file_path):
@@ -71,7 +90,7 @@ class vdb:
             
             chunk_ids = tracking_data[resolved_path]['chunk_ids']
             self.chromadb.delete(chunk_ids)
-            self.chromadb.persist()
+            # Remove persist() call - ChromaDB handles persistence automatically
             
             del tracking_data[resolved_path]
             self._save_tracking(tracking_data)
@@ -118,7 +137,7 @@ class vdb:
     def clear_database(self):
         try:
             self.chromadb.delete_collection()
-            self.chromadb.persist()
+            # Remove persist() call - ChromaDB handles persistence automatically
             if os.path.exists(self.tracking_file):
                 os.remove(self.tracking_file)
             return "Database cleared successfully"

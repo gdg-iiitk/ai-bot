@@ -206,3 +206,12 @@ INFO:root:User Input: tell me about akarsh sir
 INFO:root:User Input: tell me more
 INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 INFO:root:User Input: what is for dinner today at mess?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for today dinner
+ERROR:root:Error in chat: 1 validation error for Generation
+text
+  Input should be a valid string [type=string_type, input_value={'input': StringPromptVal...ad Faculty Details].')]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
