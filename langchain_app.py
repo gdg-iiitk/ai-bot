@@ -9,7 +9,7 @@ import logging
 from datetime import datetime
 from vdb_management import vdb
 
-# Set up API key and logging
+
 os.environ["GOOGLE_API_KEY"] = "AIzaSyAYew4okjx4jmR7xbKhLj2mAckgtUUbR-k"
 
 # Initialize logging
@@ -26,9 +26,11 @@ llm = ChatGoogleGenerativeAI(
     max_output_tokens=8192,
 )
 
-# Initialize vector store manager for retrieval only
+
 vdb_obj = vdb(persist_directory="db")
 
+
+# Don't explain this
 def load_context_file(filename):
     try:
         with open(f"./data/{filename}", "r") as file:
@@ -37,8 +39,52 @@ def load_context_file(filename):
         logging.error(f"Error loading {filename}: {e}")
         return ""
 
-# Define tools with context loading
+# Initialize memory for retrieval chain
+retrieval_memory = ConversationBufferMemory(
+    memory_key="chat_history",
+    return_messages=True,
+    output_key="answer"
+)
+
+# Define conversation template
+template = """You are Mr.G, an AI assistant for IIIT Kottayam students.Give me detailed explanation
+Current conversation:
+{chat_history}
+Context: {context}
+Human: {question}
+Assistant:"""
+
+prompt = PromptTemplate(
+    input_variables=["chat_history", "context", "question"], 
+    template=template
+)
+
+# Create retrieval chain without LLM initialization
+retrieval_chain = ConversationalRetrievalChain.from_llm(
+    llm=llm,
+    retriever=vdb_obj.get_retriever(),
+    memory=retrieval_memory,
+    get_chat_history=lambda h: str(h),
+    combine_docs_chain_kwargs={"prompt": prompt, "document_variable_name": "context"},
+    return_source_documents=True,
+    verbose=True
+)
+
+
+
+def get_retrieval_response(query):
+    """Tool function to get response from retrieval chain"""
+    response = retrieval_chain({"question": query})
+    return f"Knowledge Base Response: {response['answer']}\nSources: {[doc.metadata.get('source', 'Unknown') for doc in response['source_documents']]}"
+
+# Updated tools list with retrieval tool
+# Don't Explain tools in detail
 tools = [
+    Tool(
+        name="Knowledge Base Search",
+        func=get_retrieval_response,
+        description="Use this tool to search the knowledge base for specific information about IIIT Kottayam"
+    ),
     Tool(
         name="Load Mess Menu",
         func=lambda x: f"Mess menu context: {load_context_file('mess_menu.txt')}",
@@ -71,17 +117,25 @@ tools = [
     )
 ]
 
-# Initialize agent
+agent_memory = ConversationBufferMemory(
+    memory_key="chat_history",
+    return_messages=True,
+    output_key="output"  # Explicitly set output_key
+)
+
+# agent is a _____ , that takes in tools,the gemini llm,agent(type of agent) 
+# 
 agent = initialize_agent(
     tools, 
     llm, 
     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, 
     verbose=True,
     handle_parsing_errors=True,
-    return_intermediate_steps=True
+    return_intermediate_steps=True,
+    memory=agent_memory 
 )
 
-# Define conversation template
+
 template = """You are Mr.G, an AI assistant for IIIT Kottayam students.Give me detailed explanation
 Current conversation:
 {chat_history}
@@ -94,45 +148,23 @@ prompt = PromptTemplate(
     template=template
 )
 
-# Initialize retrieval components with session memory
-retrieval_memory = ConversationBufferMemory(
-    memory_key="chat_history",
-    return_messages=True,
-    output_key="answer"
-)
 
-# Create retrieval chain with memory
-retrieval_chain = ConversationalRetrievalChain.from_llm(
-    llm=llm,
-    retriever=vdb_obj.get_retriever(),
-    memory=retrieval_memory,
-    get_chat_history=lambda h: str(h),
-    combine_docs_chain_kwargs={"prompt": prompt, "document_variable_name": "context"},
-    return_source_documents=True,
-    verbose=True
-)
-
+# Start here;
 def chat(user_input):
     try:
         logging.info(f"User Input: {user_input}")
-        retrieval_response = retrieval_chain({"question": user_input})
-        context_response = "💡 Based on the knowledge base:\n" + retrieval_response["answer"]
         
-        agent_response = agent(user_input)
-        tool_response = {
-            "thoughts": agent_response["intermediate_steps"],
-            "final_answer": agent_response.get("output", "")
-        }
-        
-        final_response = tool_response["final_answer"]
+        # Get agent response with memory 
+        # agent get input from here
+        agent_response = agent({"input": user_input})
         
         return {
-            "final_response": final_response,
+            "final_response": agent_response["output"],
             "full_log": {
-                "context_response": context_response,
-                "tool_response": tool_response,
-                "source_docs": retrieval_response.get("source_documents", []),
-                "chat_history": retrieval_chain.memory.chat_memory.messages if retrieval_chain.memory else []
+                "thoughts": agent_response["intermediate_steps"],
+                "chat_history": agent_memory.chat_memory.messages,
+                "context_response": "",  # Add empty context_response to maintain structure
+                "tool_response": {"thoughts": agent_response["intermediate_steps"]}
             }
         }
     except Exception as e:
@@ -141,8 +173,9 @@ def chat(user_input):
 
 def initialize_bot():
     """Initialize the chatbot and return the chat function"""
-    retrieval_chain.memory.clear()
+    # Clear both memories when initializing
     return chat
+
 
 if __name__ == "__main__":
     initialize_bot()

@@ -221,3 +221,49 @@ INFO:root:User Input: who is akarsh sir
 INFO:root:User Input: what dose he do
 WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
 ERROR:root:Error in chat: 429 Resource has been exhausted (e.g. check quota).
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for dinner today
+INFO:root:User Input: what about tommorow
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for dinner today
+INFO:root:User Input: what about tommorow?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for dinner today
+INFO:root:User Input: what about tommorow
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: milma menu
+INFO:root:User Input: milma menu
+INFO:root:User Input: suggest something from the menu
+INFO:root:User Input: efef
+INFO:root:User Input: when is the nearest holiday
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: hello
+INFO:root:User Input: whats for dinner today
+INFO:root:User Input: whats for dinner today
+INFO:root:User Input: what is it for dinner
+INFO:root:User Input: what is for dinner today
+INFO:root:User Input: suggest me a faculty for digital design
+INFO:root:User Input: what is there for dinner today
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: who is akarsh sir
+INFO:root:User Input: tell me where his cabin is
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is for dinner todat?
+INFO:root:User Input: what is for dinner today
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.250.77.234:443: tcp handshaker shutdown.
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:216.58.200.170:443: tcp handshaker shutdown.
+INFO:root:User Input: thsl 
+ERROR:root:Error in chat: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.250.193.170:443: socket is null
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: tell me about milma
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
