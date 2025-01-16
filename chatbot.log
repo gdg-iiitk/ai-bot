@@ -1,0 +1,269 @@
+2025-01-13 18:27:51,029 - INFO - User Input: what is for dinner today
+2025-01-13 18:27:54,527 - INFO - Context Response: I'm sorry, I don't have access to a real-time menu. I am unable to tell you what is for dinner today.
+2025-01-13 18:27:58,789 - INFO - Tool Response: For dinner today, which is Monday, the menu is Rice, Roti, Veg Kolhapuri, Cabbage Carrot Thoran, Spicy Dal Tadka, Rasam, Chips, Curd, Salad.
+2025-01-13 18:27:58,789 - INFO - Final Response: I'm sorry, I don't have access to a real-time menu. I am unable to tell you what is for dinner today.
+
+For dinner today, which is Monday, the menu is Rice, Roti, Veg Kolhapuri, Cabbage Carrot Thoran, Spicy Dal Tadka, Rasam, Chips, Curd, Salad.
+2025-01-13 18:27:58,789 - INFO - Full response data: {'context_response': "I'm sorry, I don't have access to a real-time menu. I am unable to tell you what is for dinner today.", 'tool_response': 'For dinner today, which is Monday, the menu is Rice, Roti, Veg Kolhapuri, Cabbage Carrot Thoran, Spicy Dal Tadka, Rasam, Chips, Curd, Salad.', 'final_response': "I'm sorry, I don't have access to a real-time menu. I am unable to tell you what is for dinner today.\n\nFor dinner today, which is Monday, the menu is Rice, Roti, Veg Kolhapuri, Cabbage Carrot Thoran, Spicy Dal Tadka, Rasam, Chips, Curd, Salad."}
+2025-01-13 18:28:28,643 - INFO - User Input: when is the endsem this time
+2025-01-13 18:28:30,679 - INFO - Context Response: I don't have access to a specific calendar of events. Therefore, I cannot tell you when the endsem is this time.
+2025-01-13 18:28:34,961 - INFO - Tool Response: The end semester exam starts on November 14th.
+2025-01-13 18:28:34,961 - INFO - Final Response: I don't have access to a specific calendar of events. Therefore, I cannot tell you when the endsem is this time.
+
+The end semester exam starts on November 14th.
+2025-01-13 18:28:34,961 - INFO - Full response data: {'context_response': "I don't have access to a specific calendar of events. Therefore, I cannot tell you when the endsem is this time.", 'tool_response': 'The end semester exam starts on November 14th.', 'final_response': "I don't have access to a specific calendar of events. Therefore, I cannot tell you when the endsem is this time.\n\nThe end semester exam starts on November 14th."}
+2025-01-13 18:48:56,145 - INFO - User Input: what's for lunch today
+2025-01-13 18:49:00,051 - INFO - Context Response: I'm sorry, I don't know what's for lunch today. I am a large language model, able to communicate in response to a wide range of prompts and questions, but my knowledge about your specific lunch plans is limited.
+2025-01-13 18:49:04,814 - INFO - Tool Response: For lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Beetroot Dry, Mulaku Kondattam, Rajma Curry, Pullisherry, Curd, Salad, and Seasonal Fruit.
+2025-01-13 18:49:04,814 - INFO - Final Response: I'm sorry, I don't know what's for lunch today. I am a large language model, able to communicate in response to a wide range of prompts and questions, but my knowledge about your specific lunch plans is limited.
+
+For lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Beetroot Dry, Mulaku Kondattam, Rajma Curry, Pullisherry, Curd, Salad, and Seasonal Fruit.
+2025-01-13 18:49:04,814 - INFO - Full response data: {'context_response': "I'm sorry, I don't know what's for lunch today. I am a large language model, able to communicate in response to a wide range of prompts and questions, but my knowledge about your specific lunch plans is limited.", 'tool_response': 'For lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Beetroot Dry, Mulaku Kondattam, Rajma Curry, Pullisherry, Curd, Salad, and Seasonal Fruit.', 'final_response': "I'm sorry, I don't know what's for lunch today. I am a large language model, able to communicate in response to a wide range of prompts and questions, but my knowledge about your specific lunch plans is limited.\n\nFor lunch today, which is Monday, the menu is Jeera Rice, Kerala Rice, Roti, Beetroot Dry, Mulaku Kondattam, Rajma Curry, Pullisherry, Curd, Salad, and Seasonal Fruit."}
+2025-01-13 19:05:42,430 - INFO - User Input: when is techno cultural fest
+2025-01-13 19:05:46,977 - INFO - Context Response: I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.
+2025-01-13 19:05:49,705 - INFO - Tool Response: The techno-cultural fest is from March 21st to 23rd.
+2025-01-13 19:05:49,705 - INFO - Final Response: I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.
+
+The techno-cultural fest is from March 21st to 23rd.
+2025-01-13 19:05:49,705 - INFO - Full response data: {'context_response': "I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.", 'tool_response': 'The techno-cultural fest is from March 21st to 23rd.', 'final_response': "I'm sorry, but the context you've provided does not mention any specific techno-cultural fest or its date. Therefore, I cannot provide you with an answer to your question.\n\nThe techno-cultural fest is from March 21st to 23rd."}
+2025-01-13 22:02:04,414 - INFO - User Input: on a scale of 1 - 10 how gay is noel
+2025-01-13 22:02:10,459 - INFO - Context Response: I cannot answer that question. It is inappropriate to assign a numerical rating to someone's sexual orientation. Sexual orientation is a complex and personal aspect of identity, and it's not something that can be measured on a scale.
+2025-01-13 22:02:24,573 - INFO - Tool Response: I cannot answer this question.
+2025-01-13 22:02:24,573 - INFO - Final Response: I cannot answer that question. It is inappropriate to assign a numerical rating to someone's sexual orientation. Sexual orientation is a complex and personal aspect of identity, and it's not something that can be measured on a scale.
+
+I cannot answer this question.
+2025-01-13 22:02:24,573 - INFO - Full response data: {'context_response': "I cannot answer that question. It is inappropriate to assign a numerical rating to someone's sexual orientation. Sexual orientation is a complex and personal aspect of identity, and it's not something that can be measured on a scale.", 'tool_response': 'I cannot answer this question.', 'final_response': "I cannot answer that question. It is inappropriate to assign a numerical rating to someone's sexual orientation. Sexual orientation is a complex and personal aspect of identity, and it's not something that can be measured on a scale.\n\nI cannot answer this question."}
+2025-01-13 22:02:34,531 - INFO - User Input: still just a random giess
+2025-01-13 22:02:36,999 - INFO - Context Response: Please provide me with the context of what you're referring to. I need to know what the "random guess" is in reference to in order to tell you if it is still just a random guess.
+2025-01-13 22:02:39,966 - INFO - Tool Response: I'm not sure what you mean by "random giess". Is there anything specific you would like to know?
+2025-01-13 22:02:39,966 - INFO - Final Response: Please provide me with the context of what you're referring to. I need to know what the "random guess" is in reference to in order to tell you if it is still just a random guess.
+
+I'm not sure what you mean by "random giess". Is there anything specific you would like to know?
+2025-01-13 22:02:39,966 - INFO - Full response data: {'context_response': 'Please provide me with the context of what you\'re referring to. I need to know what the "random guess" is in reference to in order to tell you if it is still just a random guess.', 'tool_response': 'I\'m not sure what you mean by "random giess". Is there anything specific you would like to know?', 'final_response': 'Please provide me with the context of what you\'re referring to. I need to know what the "random guess" is in reference to in order to tell you if it is still just a random guess.\n\nI\'m not sure what you mean by "random giess". Is there anything specific you would like to know?'}
+2025-01-13 22:02:49,424 - INFO - User Input: random guess
+2025-01-13 22:03:10,032 - INFO - Context Response: Please provide me with the context for "it". What is the topic you are referring to?
+2025-01-13 22:03:12,729 - INFO - Tool Response: I'm sorry, but I cannot answer this question, as it is too vague.
+2025-01-13 22:03:12,729 - INFO - Final Response: Please provide me with the context for "it". What is the topic you are referring to?
+
+I'm sorry, but I cannot answer this question, as it is too vague.
+2025-01-13 22:03:12,729 - INFO - Full response data: {'context_response': 'Please provide me with the context for "it". What is the topic you are referring to?', 'tool_response': "I'm sorry, but I cannot answer this question, as it is too vague.", 'final_response': 'Please provide me with the context for "it". What is the topic you are referring to?\n\nI\'m sorry, but I cannot answer this question, as it is too vague.'}
+2025-01-14 10:54:34,515 - INFO - User Input: what's for lunch today?
+2025-01-14 10:54:39,957 - INFO - Context Response: Okay, I can help with that! However, I don't have access to the live, daily menu for the IIIT Kottayam mess. 
+
+Here's how you can usually find out what's for lunch:
+
+**1. Check Official Mess Notices:**
+
+*   **Notice Boards:** Look for the mess menu posted on notice boards within the mess or around the campus.
+*   **Mess App/Website:** Check if IIIT Kottayam has a dedicated app or website where they post the daily menu.
+*   **Student Groups/Forums:** Join student groups on platforms like WhatsApp or Telegram, where students often share the menu.
+
+**2. Ask Directly:**
+
+*   **Mess Staff:** If you're near the mess, you could ask a staff member.
+*   **Friends:** Check with your friends on campus if they know what's being served.
+
+**To help me give you a better answer in the future, could you tell me if:**
+
+*   **You have a particular mess you're referring to (e.g., hostel mess 1, mess 2)?**
+*   **You know of any apps or websites that IIIT Kottayam uses to post mess menus?**
+
+I hope this helps you find out what's for lunch today!
+2025-01-14 10:54:45,694 - INFO - Tool Response: For lunch today (Tuesday) the menu includes: Kerala Rice, Roti, Egg Bhurji, Rajma Curry, Tomato Dal Tadka, Chips, Curd, Salad, Rasam, Buttermilk.
+2025-01-14 10:54:45,694 - INFO - Final Response: Okay, I can help with that! However, I don't have access to the live, daily menu for the IIIT Kottayam mess. 
+
+Here's how you can usually find out what's for lunch:
+
+**1. Check Official Mess Notices:**
+
+*   **Notice Boards:** Look for the mess menu posted on notice boards within the mess or around the campus.
+*   **Mess App/Website:** Check if IIIT Kottayam has a dedicated app or website where they post the daily menu.
+*   **Student Groups/Forums:** Join student groups on platforms like WhatsApp or Telegram, where students often share the menu.
+
+**2. Ask Directly:**
+
+*   **Mess Staff:** If you're near the mess, you could ask a staff member.
+*   **Friends:** Check with your friends on campus if they know what's being served.
+
+**To help me give you a better answer in the future, could you tell me if:**
+
+*   **You have a particular mess you're referring to (e.g., hostel mess 1, mess 2)?**
+*   **You know of any apps or websites that IIIT Kottayam uses to post mess menus?**
+
+I hope this helps you find out what's for lunch today!
+
+For lunch today (Tuesday) the menu includes: Kerala Rice, Roti, Egg Bhurji, Rajma Curry, Tomato Dal Tadka, Chips, Curd, Salad, Rasam, Buttermilk.
+2025-01-14 13:19:53,015 - INFO - User Input: when are endsems
+2025-01-14 13:19:58,092 - INFO - Context Response: Okay, I can help with that! To give you the most accurate information about the end semester exam dates, I need a little more information. Could you please specify:
+
+*   **Which semester are you asking about?** (e.g., "Endsems for the current semester", "Endsems for the upcoming semester", "Endsems for 2024 Spring", etc.)
+*   **Which program are you in?** (e.g., "B.Tech CSE", "M.Tech ECE", "PhD CSE" etc.)
+*   **Do you want to know specific dates or just a general time frame?** (e.g. "Exact dates", "Tentative week")
+
+Once I have this information, I can provide you with the relevant end semester exam schedule, if it's available.
+2025-01-14 13:20:14,935 - INFO - Tool Response: End Semester Examinations for the odd semester start on November 14th.
+2025-01-14 13:20:14,935 - INFO - Final Response: Okay, I can help with that! To give you the most accurate information about the end semester exam dates, I need a little more information. Could you please specify:
+
+*   **Which semester are you asking about?** (e.g., "Endsems for the current semester", "Endsems for the upcoming semester", "Endsems for 2024 Spring", etc.)
+*   **Which program are you in?** (e.g., "B.Tech CSE", "M.Tech ECE", "PhD CSE" etc.)
+*   **Do you want to know specific dates or just a general time frame?** (e.g. "Exact dates", "Tentative week")
+
+Once I have this information, I can provide you with the relevant end semester exam schedule, if it's available.
+
+End Semester Examinations for the odd semester start on November 14th.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:root:Full response data: {'context_response': "Okay, I can help you with that! You have a budget of 500 rupees and want to treat your friends at Milma Cafe. Here are a few options you could consider, keeping in mind that prices can vary slightly and I am estimating the items:\n\n**Option 1: Variety of Shakes & Some Snacks**\n\n*   **3 Milkshakes** :Let's say 2 Strawberry Shakes (70 x 2 = 140) and 1  Ferrero Rocher (90). Total = 230\n*   **2 Maggi** 1 Peri peri and 1 normal : 30 +45 =75\n*   **Cutlets:** Two Chicken Cutlets: 25 x 2 = 50\n*   **Samosa:** Three Samosas: 18 x 3 = 54\n*   **Lime Juice:** Two Fresh Limes: 20 x 2 = 40\n*   Total = 230 + 75+ 50 +54+40 = 449 rs\n\nThis gives a good variety of shakes and snacks for the group.\n\n**Option 2: Focus on Mud Shakes with some Lassi and Snacks**\n\n*   **2 Mud Shakes**: Two  Mississippi Mud (110 x 2 = 220)\n*   **2 Lassi**: Two Sweet Lassis(50 x 2 = 100)\n*   **Chicken Bread Sandwiches**: Two Chicken Bread Sandwiches: 30 x 2 = 60\n*   **Samosa**: Two Samosas: 18 x 2 = 36\n*   **Tea** : 2 Tea 12 x 2 =24\n*   Total = 220 + 100+60+36+24 = 440rs\n\nThis offers a more indulgent treat with the Mud Shakes, along with some traditional options.\n\n**Option 3: Cold Coffee and Snacks**\n\n*   **4 Cold Coffee**: 2 Hard Rock Coffee and 2 Normal Cold Coffee (90 x 2 + 80x2 = 340)\n*   **1 Cheese Maggi** 45\n*   **Chicken Sandwich** 1= 60\n*   **Cutlets**: 1 = 25\n    Total: 340+45+60+25 = 470\n\nThis is a good option if you and your friends enjoy cold coffee and want some filling snacks.\n\n**Additional Notes:**\n*   These are estimates, and you can adjust the quantities and items based on your and your friends' preferences.\n*   You can also mix and match based on what your friends like.\n*   It's always a good idea to check the availability of items at the cafe before ordering.\n\nDo you have any specific preferences or any particular items your friends like? If you give me that, I can further customize a suggestion for you.", 'tool_response': 'You could buy 4 Mango Lassi, 2 Maggi Cheese, 4 Samosa, and 2 Tea from Milma for a total of 426 rupees.', 'final_response': "Okay, I can help you with that! You have a budget of 500 rupees and want to treat your friends at Milma Cafe. Here are a few options you could consider, keeping in mind that prices can vary slightly and I am estimating the items:\n\n**Option 1: Variety of Shakes & Some Snacks**\n\n*   **3 Milkshakes** :Let's say 2 Strawberry Shakes (70 x 2 = 140) and 1  Ferrero Rocher (90). Total = 230\n*   **2 Maggi** 1 Peri peri and 1 normal : 30 +45 =75\n*   **Cutlets:** Two Chicken Cutlets: 25 x 2 = 50\n*   **Samosa:** Three Samosas: 18 x 3 = 54\n*   **Lime Juice:** Two Fresh Limes: 20 x 2 = 40\n*   Total = 230 + 75+ 50 +54+40 = 449 rs\n\nThis gives a good variety of shakes and snacks for the group.\n\n**Option 2: Focus on Mud Shakes with some Lassi and Snacks**\n\n*   **2 Mud Shakes**: Two  Mississippi Mud (110 x 2 = 220)\n*   **2 Lassi**: Two Sweet Lassis(50 x 2 = 100)\n*   **Chicken Bread Sandwiches**: Two Chicken Bread Sandwiches: 30 x 2 = 60\n*   **Samosa**: Two Samosas: 18 x 2 = 36\n*   **Tea** : 2 Tea 12 x 2 =24\n*   Total = 220 + 100+60+36+24 = 440rs\n\nThis offers a more indulgent treat with the Mud Shakes, along with some traditional options.\n\n**Option 3: Cold Coffee and Snacks**\n\n*   **4 Cold Coffee**: 2 Hard Rock Coffee and 2 Normal Cold Coffee (90 x 2 + 80x2 = 340)\n*   **1 Cheese Maggi** 45\n*   **Chicken Sandwich** 1= 60\n*   **Cutlets**: 1 = 25\n    Total: 340+45+60+25 = 470\n\nThis is a good option if you and your friends enjoy cold coffee and want some filling snacks.\n\n**Additional Notes:**\n*   These are estimates, and you can adjust the quantities and items based on your and your friends' preferences.\n*   You can also mix and match based on what your friends like.\n*   It's always a good idea to check the availability of items at the cafe before ordering.\n\nDo you have any specific preferences or any particular items your friends like? If you give me that, I can further customize a suggestion for you.\n\nYou could buy 4 Mango Lassi, 2 Maggi Cheese, 4 Samosa, and 2 Tea from Milma for a total of 426 rupees."}
+INFO:root:User Input: Hey I'm interested in computer networks, which professor should i talk to for projects.
+INFO:root:Full response data: {'context_response': "Okay, based on the faculty information provided, here are the professors who have expertise that aligns with computer networks, and who you might consider reaching out to for projects:\n\n*   **Dr. E. Silambarasan:** His Ph.D. is from NIT Trichy, and while the specific area isn't mentioned, NITs generally have strong computer networking research.\n*   **Dr. Samson Anosh Babu P:** He has an MTech in Information Security from NIT Rourkela and a PhD from IIT Dhanbad, which also has networking components and projects.\n* **Dr.Venkatesh S** : He has a PhD from Anna University, Chennai which has a good reputation in the domain of Computer Networks\n*  **Dr. Rajesh G:** He has a Ph.D from National Institute of Technology Karnataka, Surathkal and can also be a good option.\n\n**Recommendation:**\n\n1.  **Dr. Samson Anosh Babu P** would be a very good choice given the focus on Information Security, which ties directly with many aspects of Computer Networks\n2. **Dr. E. Silambarasan** could be the next ideal choice since his PHD is from NIT Trichy, which has a great networking research domain.\n3.  **Dr. Venkatesh S** is another excellent option given his PhD from Anna University.\n4.  **Dr. Rajesh G** can be your last option as he is having a Ph.D from National Institute of Technology Karnataka, Surathkal.\n\n**How to Approach:**\n\n*   **Check their research interests:** Try to see if their specific research areas align with your project idea on the IIIT Kottayam website or by simply checking their publication.\n*   **Email:** Send them a polite email introducing yourself, expressing your interest in computer networks, and asking about the possibility of doing a project under their guidance. Make sure to include any specific ideas you have, but it is not mandatory.\n*  **Be specific:** Mention what part of computer networks intrigues you the most.\n\nI recommend that you reach out to any one of the mentioned professors first and see if he is suitable for your projects, if not then you can consider the next one. Good luck with your project!", 'tool_response': 'Based on their qualifications, you could reach out to Dr. Jayakrushna Sahoo, Dr. Vengadeswaran S, Dr. Bibin Francis, or Dr. Oswald C. to discuss project possibilities in computer networks.', 'final_response': "Okay, based on the faculty information provided, here are the professors who have expertise that aligns with computer networks, and who you might consider reaching out to for projects:\n\n*   **Dr. E. Silambarasan:** His Ph.D. is from NIT Trichy, and while the specific area isn't mentioned, NITs generally have strong computer networking research.\n*   **Dr. Samson Anosh Babu P:** He has an MTech in Information Security from NIT Rourkela and a PhD from IIT Dhanbad, which also has networking components and projects.\n* **Dr.Venkatesh S** : He has a PhD from Anna University, Chennai which has a good reputation in the domain of Computer Networks\n*  **Dr. Rajesh G:** He has a Ph.D from National Institute of Technology Karnataka, Surathkal and can also be a good option.\n\n**Recommendation:**\n\n1.  **Dr. Samson Anosh Babu P** would be a very good choice given the focus on Information Security, which ties directly with many aspects of Computer Networks\n2. **Dr. E. Silambarasan** could be the next ideal choice since his PHD is from NIT Trichy, which has a great networking research domain.\n3.  **Dr. Venkatesh S** is another excellent option given his PhD from Anna University.\n4.  **Dr. Rajesh G** can be your last option as he is having a Ph.D from National Institute of Technology Karnataka, Surathkal.\n\n**How to Approach:**\n\n*   **Check their research interests:** Try to see if their specific research areas align with your project idea on the IIIT Kottayam website or by simply checking their publication.\n*   **Email:** Send them a polite email introducing yourself, expressing your interest in computer networks, and asking about the possibility of doing a project under their guidance. Make sure to include any specific ideas you have, but it is not mandatory.\n*  **Be specific:** Mention what part of computer networks intrigues you the most.\n\nI recommend that you reach out to any one of the mentioned professors first and see if he is suitable for your projects, if not then you can consider the next one. Good luck with your project!\n\nBased on their qualifications, you could reach out to Dr. Jayakrushna Sahoo, Dr. Vengadeswaran S, Dr. Bibin Francis, or Dr. Oswald C. to discuss project possibilities in computer networks."}
+INFO:root:User Input: I am planning a 3 day vaction in february, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:root:Full response data: {'context_response': "Okay, let's find the best 3-day window in February for your vacation, minimizing class disruption.\n\nHere's the important information to consider from the academic calendar:\n\n*   **February 3rd:** B.Tech BTP/Honours/MS project first review\n*   **February 17th:** Mid Semester Examination Starts (for semester 1)\n\n**Analysis:**\n\n*   The biggest constraint is the Mid-Semester Exams starting on February 17th. It's best to avoid any dates close to this period.\n*   The BTP/Honours/MS project first review on Feb 3rd might clash with your vacation if you're involved, but I assume you are not. If that is not the case you should let me know.\n\n**Recommended Dates:**\n\nGiven the above, the best 3-day window for your vacation in February would be **February 1st to 3rd**.\n\n**Reasoning:**\n\n*   This window is right after classes begin (Jan 1st), so you shouldn't miss any major portion of the courses.\n*   It's well before the mid-semester examinations, ensuring you're not missing any crucial revision time.\n*   The 3rd is Friday, allowing you to either travel on the same day itself or plan to travel back to the campus on the 3rd itself, minimizing your absence from the campus.\n\n**Additional Notes:**\n\n*   **Flexibility:** This is the ideal window based on the academic calendar. However, if you have specific requirements or want a longer break, it might be possible to work around it with some planning and pre-arrangement with professors.\n*   **Check with your professors:** It is always wise to inform your professors about your absence, especially if you are going to miss any important classes or project deadlines.\n*  **Assignments:** Ensure you're aware of any upcoming assignments due after you return.\n\nIn summary, **February 1st to 3rd** is the best option to minimize disruption to your classes during your vacation.\n\nDo you have any other queries or need further assistance?", 'tool_response': 'I suggest you plan your 3-day vacation for February 1st (Saturday) to February 3rd (Monday). This should minimize class conflicts as it includes a weekend.', 'final_response': "Okay, let's find the best 3-day window in February for your vacation, minimizing class disruption.\n\nHere's the important information to consider from the academic calendar:\n\n*   **February 3rd:** B.Tech BTP/Honours/MS project first review\n*   **February 17th:** Mid Semester Examination Starts (for semester 1)\n\n**Analysis:**\n\n*   The biggest constraint is the Mid-Semester Exams starting on February 17th. It's best to avoid any dates close to this period.\n*   The BTP/Honours/MS project first review on Feb 3rd might clash with your vacation if you're involved, but I assume you are not. If that is not the case you should let me know.\n\n**Recommended Dates:**\n\nGiven the above, the best 3-day window for your vacation in February would be **February 1st to 3rd**.\n\n**Reasoning:**\n\n*   This window is right after classes begin (Jan 1st), so you shouldn't miss any major portion of the courses.\n*   It's well before the mid-semester examinations, ensuring you're not missing any crucial revision time.\n*   The 3rd is Friday, allowing you to either travel on the same day itself or plan to travel back to the campus on the 3rd itself, minimizing your absence from the campus.\n\n**Additional Notes:**\n\n*   **Flexibility:** This is the ideal window based on the academic calendar. However, if you have specific requirements or want a longer break, it might be possible to work around it with some planning and pre-arrangement with professors.\n*   **Check with your professors:** It is always wise to inform your professors about your absence, especially if you are going to miss any important classes or project deadlines.\n*  **Assignments:** Ensure you're aware of any upcoming assignments due after you return.\n\nIn summary, **February 1st to 3rd** is the best option to minimize disruption to your classes during your vacation.\n\nDo you have any other queries or need further assistance?\n\nI suggest you plan your 3-day vacation for February 1st (Saturday) to February 3rd (Monday). This should minimize class conflicts as it includes a weekend."}
+INFO:root:User Input: what is for lunch today?
+INFO:root:Full response data: {'context_response': "Okay, based on the mess menu you provided, today being Wednesday, here's what's for lunch:\n\n**Lunch:** Rice, Roti, Palak Dal Tadka, Crunchy Bhindi Fry, Rasam, Papad, Curd, Salad, Banana, Buttermilk", 'tool_response': "Today's lunch is Kerala Rice, Roti, Egg Bhurji, Rajma Curry, Tomato Dal Tadka, Chips, Curd, Salad, Rasam, and Buttermilk.", 'final_response': "Okay, based on the mess menu you provided, today being Wednesday, here's what's for lunch:\n\n**Lunch:** Rice, Roti, Palak Dal Tadka, Crunchy Bhindi Fry, Rasam, Papad, Curd, Salad, Banana, Buttermilk\n\nToday's lunch is Kerala Rice, Roti, Egg Bhurji, Rajma Curry, Tomato Dal Tadka, Chips, Curd, Salad, Rasam, and Buttermilk."}
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for dinner today?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for lunch today
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: tell me about Akarsh sir
+INFO:root:User Input: tell me about the cost of a pasta in milma
+INFO:root:User Input: tell me about u
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: tell me about akarsh sir
+INFO:root:User Input: what does he teach
+INFO:root:User Input: what does akarsh sir teach
+INFO:root:User Input: reffer faculty document
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: who is akarsh nair
+INFO:root:User Input: what does he teach
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: who is akarsh nair,
+INFO:root:User Input: what does he teach
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+ERROR:root:Error in chat: 429 Resource has been exhausted (e.g. check quota).
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is for lunch today
+INFO:root:User Input: what about tommorow
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is today's dinner
+INFO:root:Previous Context: None
+ERROR:root:Error in chat: One input key expected got ['context', 'question']
+INFO:root:User Input: what about tommorow
+INFO:root:Previous Context: None
+ERROR:root:Error in chat: One input key expected got ['context', 'question']
+INFO:root:User Input: what all have talked about before
+INFO:root:Previous Context: None
+ERROR:root:Error in chat: One input key expected got ['context', 'question']
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: I am planning a 3 day vaction in february, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input:  Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:root:User Input: Hey I'm interested in computer networks, which professor should i talk to for projects.
+INFO:root:User Input: I am planning a 3 day vaction in february, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: I am planning a 3 day vaction in march, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:root:User Input: I am planning a 3 day vaction in march, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:root:User Input: I am planning a 3 day vaction in march, suggest me the dates such that i dont miss too much classes
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:root:User Input:  Hey I'm interested in computer networks, which professor should i talk to for projects.
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: Hey today i want to give treat to my friends . My budget is 500rs , what can i buy from Milma?
+INFO:root:User Input: helll
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for lunch today?
+INFO:root:User Input: how about breakfast?
+INFO:root:User Input: what were we talking about
+INFO:root:User Input: tell me about akarsh sir
+INFO:root:User Input: so what does he do
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: tell me about akarsh sir
+INFO:root:User Input: tell me more
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is for dinner today at mess?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for today dinner
+ERROR:root:Error in chat: 1 validation error for Generation
+text
+  Input should be a valid string [type=string_type, input_value={'input': StringPromptVal...ad Faculty Details].')]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is for dinner today
+INFO:root:User Input: who is akarsh sir
+INFO:root:User Input: what dose he do
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+ERROR:root:Error in chat: 429 Resource has been exhausted (e.g. check quota).
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for dinner today
+INFO:root:User Input: what about tommorow
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for dinner today
+INFO:root:User Input: what about tommorow?
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what's for dinner today
+INFO:root:User Input: what about tommorow
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: milma menu
+INFO:root:User Input: milma menu
+INFO:root:User Input: suggest something from the menu
+INFO:root:User Input: efef
+INFO:root:User Input: when is the nearest holiday
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+ERROR:root:Error loading inst_calender.txt: [Errno 2] No such file or directory: './data/inst_calender.txt'
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: hello
+INFO:root:User Input: whats for dinner today
+INFO:root:User Input: whats for dinner today
+INFO:root:User Input: what is it for dinner
+INFO:root:User Input: what is for dinner today
+INFO:root:User Input: suggest me a faculty for digital design
+INFO:root:User Input: what is there for dinner today
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: who is akarsh sir
+INFO:root:User Input: tell me where his cabin is
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: what is for dinner todat?
+INFO:root:User Input: what is for dinner today
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.250.77.234:443: tcp handshaker shutdown.
+WARNING:langchain_google_genai.chat_models:Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised RetryError: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:216.58.200.170:443: tcp handshaker shutdown.
+INFO:root:User Input: thsl 
+ERROR:root:Error in chat: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.250.193.170:443: socket is null
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+INFO:root:User Input: tell me about milma
+INFO:chromadb.telemetry.product.posthog:Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
